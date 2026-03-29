@@ -40,7 +40,7 @@ const portfolioData = [
                 type: "video", // Tandai sebagai video
                 // Gunakan gambar statis (jpg/png) untuk thumbnail folder. Jangan pakai .mov di img.
                 img: "Sampul video.jpg", 
-                src: "vd 1.MP4" // Sumber video asli
+                src: "vd 1.mp4" // Sumber video asli
             },
 				{
                 title: "Instagram Konten",
@@ -64,7 +64,7 @@ const portfolioData = [
                 type: "video", // Tandai sebagai video
                 // Gunakan gambar statis (jpg/png) untuk thumbnail folder. Jangan pakai .mov di img.
                 img: "Sampul video.jpg", 
-                src: "vd 4.MP4" // Sumber video asli
+                src: "vd 4.mp4" // Sumber video asli
             },
         ]
     },
