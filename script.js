@@ -67,17 +67,6 @@ const portfolioData = [
                 src: "vd 4.mp4" // Sumber video asli
             },
         ]
-    },
-    {
-        folderName: "Sertifikat",
-        icon: "fa-folder-open",
-        works: [
-            { title: "Sertifikat", desc: "Surat Keterangan Hasil Pemeriksaan Narkotika", img: "BNN.JPEG" },
-				{ title: "Sertifikat", desc: "SEMNAS GENDER", img: "GENDER.JPEG" },
-				{ title: "Sertifikat", desc: "Tim Digital JTF 2018", img: "JTF.JPEG" },
-				{ title: "Sertifikat", desc: "Prakti Kerja Lapangan (Pelindo III Cabang Tanjung Perak)", img: "MAGANG.JPEG" },
-				{ title: "Sertifikat", desc: "SOINA", img: "SOINA.JPEG" },
-        ]
     }
 ];
 
