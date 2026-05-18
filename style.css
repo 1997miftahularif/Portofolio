@@ -258,3 +258,9 @@ body.modal-active { overflow: hidden; }
   }
 }
 
+.modal-thumb video {
+  width: 100%;
+  max-height: 72vh;
+  border-radius: 16px;
+  background: #000;
+}
