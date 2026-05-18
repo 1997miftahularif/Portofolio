@@ -202,6 +202,7 @@ function openProjectModal(index) {
   const project = projects[index];
   if (!project) return;
 
+  // PDF
   if (project.type === "pdf") {
     modalThumb.innerHTML = `
       <iframe
@@ -210,13 +211,45 @@ function openProjectModal(index) {
         loading="lazy">
       </iframe>
     `;
-  } else {
+  }
+
+  // IMAGE
+  else if (project.type === "image") {
     modalThumb.innerHTML = `
       <a href="${project.image}" target="_blank" rel="noopener" title="Open full image in new tab">
         <img src="${project.image}" alt="${project.title} full design preview">
       </a>
     `;
   }
+
+  // VIDEO
+  else if (project.type === "video") {
+    modalThumb.innerHTML = `
+      <video controls autoplay playsinline>
+        <source src="${project.image}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+  }
+
+  // FALLBACK
+  else {
+    modalThumb.innerHTML = `
+      <p>Preview unavailable.</p>
+    `;
+  }
+
+  modalCategory.textContent = project.category;
+  modalTitle.textContent = project.title;
+  modalDescription.textContent = project.description;
+  modalObjective.textContent = project.objective;
+  modalRole.textContent = project.role;
+  modalBeforeAfter.textContent = project.beforeAfter;
+  modalResult.textContent = project.result;
+
+  projectModal.classList.add("open");
+  document.body.classList.add("modal-active");
+}
 
   modalCategory.textContent = project.category;
   modalTitle.textContent = project.title;
