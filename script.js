@@ -121,183 +121,155 @@ const projects = [
   }
 ];
 
-const categories = ["All", ...new Set(projects.map(project => project.category))];
+document.addEventListener("DOMContentLoaded", () => {
+  const categories = ["All", ...new Set(projects.map(project => project.category))];
 
-const filterButtons = document.getElementById("filterButtons");
-const projectGrid = document.getElementById("projectGrid");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const year = document.getElementById("year");
+  const filterButtons = document.getElementById("filterButtons");
+  const projectGrid = document.getElementById("projectGrid");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const year = document.getElementById("year");
 
-const modal = document.getElementById("projectModal");
-const modalThumb = document.getElementById("modalThumb");
-const modalCategory = document.getElementById("modalCategory");
-const modalTitle = document.getElementById("modalTitle");
-const modalDescription = document.getElementById("modalDescription");
-const modalObjective = document.getElementById("modalObjective");
-const modalRole = document.getElementById("modalRole");
-const modalBeforeAfter = document.getElementById("modalBeforeAfter");
-const modalResult = document.getElementById("modalResult");
+  const modal = document.getElementById("projectModal");
+  const modalThumb = document.getElementById("modalThumb");
+  const modalCategory = document.getElementById("modalCategory");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalObjective = document.getElementById("modalObjective");
+  const modalRole = document.getElementById("modalRole");
+  const modalBeforeAfter = document.getElementById("modalBeforeAfter");
+  const modalResult = document.getElementById("modalResult");
 
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+  if (year) year.textContent = new Date().getFullYear();
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
-
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
     });
-  });
-}
+  }
 
-function getPreviewLabel(type) {
-  if (type === "pdf") return "Preview PDF";
-  if (type === "video") return "Play Video";
-  if (type === "image") return "View Image";
-  return "Preview";
-}
+  function renderButtons() {
+    if (!filterButtons) return;
 
-function renderButtons() {
-  if (!filterButtons) return;
+    filterButtons.innerHTML = categories.map(category => `
+      <button class="filter-btn ${category === "All" ? "active" : ""}" data-category="${category}">
+        ${category}
+      </button>
+    `).join("");
 
-  filterButtons.innerHTML = categories.map(category => `
-    <button class="filter-btn ${category === "All" ? "active" : ""}" data-category="${category}">${category}</button>
-  `).join("");
-
-  document.querySelectorAll(".filter-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-      renderProjects(button.dataset.category);
+    document.querySelectorAll(".filter-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        renderProjects(button.dataset.category);
+      });
     });
-  });
-}
+  }
 
-function renderProjects(category = "All") {
-  if (!projectGrid) return;
+  function renderProjects(category = "All") {
+    if (!projectGrid) return;
 
-  const filteredProjects = category === "All"
-    ? projects
-    : projects.filter(project => project.category === category);
+    const filteredProjects = category === "All"
+      ? projects
+      : projects.filter(project => project.category === category);
 
-  projectGrid.innerHTML = filteredProjects.map(project => {
-    const originalIndex = projects.indexOf(project);
-    const previewLabel = getPreviewLabel(project.type);
+    projectGrid.innerHTML = filteredProjects.map(project => {
+      const originalIndex = projects.indexOf(project);
+      const label = project.type === "video" ? "Preview Video" : project.type === "image" ? "Preview Image" : "Preview PDF";
 
-    return `
-      <article class="project-card" tabindex="0" role="button" aria-label="Preview project details for ${project.title}" data-project-index="${originalIndex}">
-        <div class="project-thumb">
-          <img src="${project.thumbnail}" alt="${project.title} thumbnail" loading="lazy">
-          <span class="view-label">${previewLabel}</span>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">${project.category}</div>
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <div class="project-detail">
-            <p><strong>Objective:</strong> ${project.objective}</p>
-            <p><strong>Role:</strong> ${project.role}</p>
+      return `
+        <article class="project-card" tabindex="0" role="button" aria-label="Preview ${project.title}" data-project-index="${originalIndex}">
+          <div class="project-thumb">
+            <img src="${project.thumbnail}" alt="${project.title} thumbnail" loading="lazy">
+            <span class="view-label">${label}</span>
           </div>
-        </div>
-      </article>
-    `;
-  }).join("");
+          <div class="project-body">
+            <div class="project-meta">${project.category}</div>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-detail">
+              <p><strong>Objective:</strong> ${project.objective}</p>
+              <p><strong>Role:</strong> ${project.role}</p>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
 
-  document.querySelectorAll(".project-card").forEach(card => {
-    card.addEventListener("click", () => {
-      openProjectModal(Number(card.dataset.projectIndex));
+    document.querySelectorAll(".project-card").forEach(card => {
+      card.addEventListener("click", () => openProjectModal(card.dataset.projectIndex));
+      card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProjectModal(card.dataset.projectIndex);
+        }
+      });
     });
+  }
 
-    card.addEventListener("keydown", event => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openProjectModal(Number(card.dataset.projectIndex));
-      }
-    });
+  function openProjectModal(index) {
+    const project = projects[Number(index)];
+    if (!project || !modal || !modalThumb) return;
+
+    if (project.type === "pdf") {
+      modalThumb.innerHTML = `
+        <iframe
+          src="${project.image}#toolbar=0&navpanes=0&scrollbar=0"
+          title="${project.title} PDF preview"
+          loading="lazy">
+        </iframe>
+      `;
+    } else if (project.type === "image") {
+      modalThumb.innerHTML = `
+        <a href="${project.image}" target="_blank" rel="noopener" title="Open full image in new tab">
+          <img src="${project.image}" alt="${project.title} full design preview">
+        </a>
+      `;
+    } else if (project.type === "video") {
+      modalThumb.innerHTML = `
+        <video controls autoplay playsinline>
+          <source src="${project.image}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+    } else {
+      modalThumb.innerHTML = `<p>Preview unavailable.</p>`;
+    }
+
+    if (modalCategory) modalCategory.textContent = project.category;
+    if (modalTitle) modalTitle.textContent = project.title;
+    if (modalDescription) modalDescription.textContent = project.description;
+    if (modalObjective) modalObjective.textContent = project.objective;
+    if (modalRole) modalRole.textContent = project.role;
+    if (modalBeforeAfter) modalBeforeAfter.textContent = project.beforeAfter;
+    if (modalResult) modalResult.textContent = project.result;
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-active");
+  }
+
+  function closeProjectModal() {
+    if (!modal) return;
+
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-active");
+
+    if (modalThumb) modalThumb.innerHTML = "";
+  }
+
+  document.querySelectorAll("[data-close-modal]").forEach(element => {
+    element.addEventListener("click", closeProjectModal);
   });
-}
 
-function renderProjectMedia(project) {
-  if (!modalThumb) return;
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal && modal.classList.contains("open")) {
+      closeProjectModal();
+    }
+  });
 
-  if (project.type === "pdf") {
-    modalThumb.innerHTML = `
-      <iframe
-        src="${project.image}#toolbar=0&navpanes=0&scrollbar=0"
-        title="${project.title} PDF preview"
-        loading="lazy">
-      </iframe>
-    `;
-    return;
-  }
-
-  if (project.type === "image") {
-    modalThumb.innerHTML = `
-      <a href="${project.image}" target="_blank" rel="noopener" title="Open full image in new tab">
-        <img src="${project.image}" alt="${project.title} full design preview">
-      </a>
-    `;
-    return;
-  }
-
-  if (project.type === "video") {
-    modalThumb.innerHTML = `
-      <video controls autoplay playsinline>
-        <source src="${project.image}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    `;
-    return;
-  }
-
-  modalThumb.innerHTML = `<p>Preview unavailable.</p>`;
-}
-
-function openProjectModal(index) {
-  const project = projects[index];
-  if (!project || !modal) return;
-
-  renderProjectMedia(project);
-
-  if (modalCategory) modalCategory.textContent = project.category;
-  if (modalTitle) modalTitle.textContent = project.title;
-  if (modalDescription) modalDescription.textContent = project.description;
-  if (modalObjective) modalObjective.textContent = project.objective;
-  if (modalRole) modalRole.textContent = project.role;
-  if (modalBeforeAfter) modalBeforeAfter.textContent = project.beforeAfter;
-  if (modalResult) modalResult.textContent = project.result;
-
-  modal.classList.add("open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-active");
-}
-
-function closeProjectModal() {
-  if (!modal) return;
-
-  modal.classList.remove("open");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-active");
-
-  if (modalThumb) {
-    modalThumb.innerHTML = "";
-  }
-}
-
-document.querySelectorAll("[data-close-modal]").forEach(element => {
-  element.addEventListener("click", closeProjectModal);
+  renderButtons();
+  renderProjects();
 });
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && modal && modal.classList.contains("open")) {
-    closeProjectModal();
-  }
-});
-
-renderButtons();
-renderProjects();
