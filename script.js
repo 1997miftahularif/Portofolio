@@ -12,15 +12,15 @@ const projects = [
     type: "pdf"
   },
   {
-    title: "Brand Identity Direction",
-    category: "Branding",
-    description: "Visual identity exploration including colors, typography, and visual mood.",
-    objective: "Build a more professional and memorable brand appearance.",
-    role: "Brand visual designer.",
-    beforeAfter: "Before: unclear identity. After: cohesive brand direction.",
-    result: "Cleaner brand perception and easier content production.",
-    thumbnail: "assets/projects/branding-thumb.svg",
-    image: "assets/projects/branding-case-study.pdf",
+    title: "Social Media Story Design",
+    category: "ZOYA",
+    description: "A collection of elegant social media campaign visuals created for ZOYA, combining modest fashion storytelling, inspirational content, and product-focused branding.",
+    objective: "Strengthen brand identity and audience engagement through clean, emotional, and visually consistent campaign design.",
+    role: "Graphic Designer, campaign visual direction, content layout, typography styling, and social media execution.",
+    beforeAfter: "Before: promotional content appeared visually disconnected and less emotionally engaging. After: cohesive, aesthetic, and brand-aligned campaign visuals with stronger storytelling.",
+    result: "Improved visual consistency, stronger brand presentation, and more engaging social media content for fashion-focused audiences.",
+    thumbnail: "assets/projects/zoya.jpg",
+    image: "assets/projects/zoya.pdf",
     type: "pdf"
   },
   {
