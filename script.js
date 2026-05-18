@@ -7,8 +7,8 @@ const projects = [
     role: "Graphic Designer, campaign visual direction, layout design, and product presentation.",
     beforeAfter: "Before: product communication felt standard and less emotionally engaging. After: cheerful and visually consistent campaign assets aligned with the brand identity.",
     result: "Improved brand presentation and stronger audience engagement across social media platforms.",
-    thumbnail: "assets/projects/1.jpg",
-    image: "assets/projects/poutcare.pdf",
+    thumbnail: "assets/projects/1_11zon.jpg",
+    image: "assets/projects/poutcare_11zon.pdf",
     type: "pdf"
   },
   {
@@ -19,8 +19,8 @@ const projects = [
     role: "Graphic Designer, campaign visual direction, content layout, typography styling, and social media execution.",
     beforeAfter: "Before: promotional content appeared visually disconnected and less emotionally engaging. After: cohesive, aesthetic, and brand-aligned campaign visuals with stronger storytelling.",
     result: "Improved visual consistency, stronger brand presentation, and more engaging social media content for fashion-focused audiences.",
-    thumbnail: "assets/projects/zoya.jpg",
-    image: "assets/projects/zoya.pdf",
+    thumbnail: "assets/projects/zoya_11zon.jpg",
+    image: "assets/projects/zoya_11zon.pdf",
     type: "pdf"
   },
   {
