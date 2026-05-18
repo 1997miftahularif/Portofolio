@@ -1,7 +1,7 @@
 const projects = [
   {
-    title: "Social Media Design",
-    category: "POUTCARE",
+    title: "POUTCARE",
+    category: "Social Media Design",
     description: "A series of social media visuals designed to introduce Poutcare products through playful and family-friendly branding.",
     objective: "Build stronger product awareness and create an engaging visual identity for parents and children audiences.",
     role: "Graphic Designer, campaign visual direction, layout design, and product presentation.",
@@ -12,8 +12,8 @@ const projects = [
     type: "pdf"
   },
   {
-    title: "Social Media Story Design",
-    category: "ZOYA",
+    title: "ZOYA",
+    category: "Social Media Design",
     description: "A collection of elegant social media campaign visuals created for ZOYA, combining modest fashion storytelling, inspirational content, and product-focused branding.",
     objective: "Strengthen brand identity and audience engagement through clean, emotional, and visually consistent campaign design.",
     role: "Graphic Designer, campaign visual direction, content layout, typography styling, and social media execution.",
