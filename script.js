@@ -24,16 +24,21 @@ const projects = [
     type: "pdf"
   },
   {
-    title: "Packaging Concept Design",
-    category: "Packaging",
+    title: "Jazz Traffic Festival",
+    category: "Video Editing",
     description: "Packaging concept for a consumer product with simple hierarchy and product benefit focus.",
     objective: "Make product information easier to understand on shelf and online.",
     role: "Packaging layout designer.",
     beforeAfter: "Before: crowded information. After: cleaner packaging structure.",
     result: "More premium and readable product presentation.",
-    thumbnail: "assets/projects/packaging-thumb.svg",
-    image: "assets/projects/packaging-case-study.pdf",
-    type: "pdf"
+    thumbnail: "assets/projects/stfjazz.jpg",
+
+    media: [
+    "assets/projects/jazzday1.mp4",
+    "assets/projects/jazzday2.mp4",
+  ],
+
+  type: "video"
   },
   {
     title: "Promotional Poster Design",
