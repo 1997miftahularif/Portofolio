@@ -1,12 +1,12 @@
 const projects = [
   {
-    title: "Social Media Campaign Design",
-    category: "Social Media Design",
-    description: "A set of branded carousel and feed designs for a product awareness campaign.",
-    objective: "Increase product clarity and audience interest through clean visual storytelling.",
-    role: "Graphic Designer, layout direction, visual execution.",
-    beforeAfter: "Before: inconsistent content layout. After: structured and brand-aligned campaign visuals.",
-    result: "Improved visual consistency and stronger brand presentation.",
+    title: "Social Media Design",
+    category: "POUTCARE",
+    description: "A series of social media visuals designed to introduce Poutcare products through playful and family-friendly branding.",
+    objective: "Build stronger product awareness and create an engaging visual identity for parents and children audiences.",
+    role: "Graphic Designer, campaign visual direction, layout design, and product presentation.",
+    beforeAfter: "Before: product communication felt standard and less emotionally engaging. After: cheerful and visually consistent campaign assets aligned with the brand identity.",
+    result: "Improved brand presentation and stronger audience engagement across social media platforms.",
     thumbnail: "assets/projects/1.jpg",
     image: "assets/projects/poutcare.pdf",
     type: "pdf"
