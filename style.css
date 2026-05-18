@@ -264,3 +264,7 @@ body.modal-active { overflow: hidden; }
   border-radius: 16px;
   background: #000;
 }
+
+.modal-thumb iframe {
+  margin-bottom: 20px;
+}

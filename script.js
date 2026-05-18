@@ -24,20 +24,18 @@ const projects = [
     type: "pdf"
   },
   {
-    title: "Jazz Traffic Festival",
-    category: "Video Editing",
-    description: "Packaging concept for a consumer product with simple hierarchy and product benefit focus.",
-    objective: "Make product information easier to understand on shelf and online.",
-    role: "Packaging layout designer.",
-    beforeAfter: "Before: crowded information. After: cleaner packaging structure.",
-    result: "More premium and readable product presentation.",
-    thumbnail: "assets/projects/stfjazz.jpg",
-
-    media: [
-    "assets/projects/jazzday1.mp4",
-    "assets/projects/jazzday2.mp4",
+  title: "Jazz Traffic Festival",
+  category: "Video Editing",
+  description: "Short-form video editing project for event documentation and social media campaign needs.",
+  objective: "Create engaging video content with a clear visual flow and festival atmosphere.",
+  role: "Video Editor, visual arranger, and social media content editor.",
+  beforeAfter: "Before: raw footage. After: structured short-form video content.",
+  result: "More engaging video format ready for digital and social media use.",
+  thumbnail: "assets/projects/stfjazz.jpg",
+  media: [
+    "assets/projects/Jazzday1.mp4",
+    "assets/projects/Jazzday2.mp4"
   ],
-
   type: "video"
   },
   {
@@ -228,13 +226,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (project.type === "image") {
       modalThumb.innerHTML = `
         <a href="${project.image}" target="_blank" rel="noopener" title="Open full image in new tab">
-          <img src="${project.image}" alt="${project.title} full design preview">
-        </a>
+           <img src="${project.image}" alt="${project.title} full design preview">
+         </a>
       `;
     } else if (project.type === "video") {
       modalThumb.innerHTML = `
         <video controls autoplay playsinline>
-          <source src="${project.image}" type="video/mp4">
+          <source src="${project.media[0]}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       `;
