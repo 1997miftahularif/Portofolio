@@ -1,0 +1,252 @@
+const projects = [
+  {
+    title: "Social Media Campaign Design",
+    category: "Social Media Design",
+    description: "A set of branded carousel and feed designs for a product awareness campaign.",
+    objective: "Increase product clarity and audience interest through clean visual storytelling.",
+    role: "Graphic Designer, layout direction, visual execution.",
+    beforeAfter: "Before: inconsistent content layout. After: structured and brand-aligned campaign visuals.",
+    result: "Improved visual consistency and stronger brand presentation.",
+    thumbnail: "assets/projects/1.jpg",
+    image: "assets/projects/poutcare.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Brand Identity Direction",
+    category: "Branding",
+    description: "Visual identity exploration including colors, typography, and visual mood.",
+    objective: "Build a more professional and memorable brand appearance.",
+    role: "Brand visual designer.",
+    beforeAfter: "Before: unclear identity. After: cohesive brand direction.",
+    result: "Cleaner brand perception and easier content production.",
+    thumbnail: "assets/projects/branding-thumb.svg",
+    image: "assets/projects/branding-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Packaging Concept Design",
+    category: "Packaging",
+    description: "Packaging concept for a consumer product with simple hierarchy and product benefit focus.",
+    objective: "Make product information easier to understand on shelf and online.",
+    role: "Packaging layout designer.",
+    beforeAfter: "Before: crowded information. After: cleaner packaging structure.",
+    result: "More premium and readable product presentation.",
+    thumbnail: "assets/projects/packaging-thumb.svg",
+    image: "assets/projects/packaging-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Promotional Poster Design",
+    category: "Poster",
+    description: "Campaign poster designed for digital promotion and announcement needs.",
+    objective: "Create attention-grabbing visuals with clear event or product message.",
+    role: "Poster designer.",
+    beforeAfter: "Before: flat visual. After: stronger hierarchy and CTA.",
+    result: "More direct and professional promotional asset.",
+    thumbnail: "assets/projects/poster-thumb.svg",
+    image: "assets/projects/poster-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Short Video Editing",
+    category: "Video Editing",
+    description: "Short-form video edit for social media using product highlights and simple transitions.",
+    objective: "Deliver fast, engaging content for social media campaigns.",
+    role: "Video editor and visual arranger.",
+    beforeAfter: "Before: raw footage. After: structured short-form content.",
+    result: "More engaging video format ready for posting.",
+    thumbnail: "assets/projects/video-thumb.svg",
+    image: "assets/projects/video-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Website UI Landing Page",
+    category: "Website UI",
+    description: "Landing page UI concept for service or product introduction.",
+    objective: "Guide visitors from first impression to clear action.",
+    role: "UI visual designer.",
+    beforeAfter: "Before: unclear page flow. After: focused landing page structure.",
+    result: "Improved visual flow and CTA visibility.",
+    thumbnail: "assets/projects/website-ui-thumb.svg",
+    image: "assets/projects/website-ui-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Marketplace Product Banner",
+    category: "Marketplace",
+    description: "Product banner for marketplace listing and promotional display.",
+    objective: "Make product benefits visible quickly to potential buyers.",
+    role: "Marketplace visual designer.",
+    beforeAfter: "Before: generic listing image. After: benefit-focused product banner.",
+    result: "Stronger product presentation for online selling.",
+    thumbnail: "assets/projects/marketplace-thumb.svg",
+    image: "assets/projects/marketplace-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Instagram Carousel Education",
+    category: "Social Media",
+    description: "Educational carousel explaining product benefits with clean copy and visual structure.",
+    objective: "Educate audience and support soft-selling strategy.",
+    role: "Content visual designer.",
+    beforeAfter: "Before: long text caption only. After: swipeable educational visual story.",
+    result: "More digestible information and stronger engagement potential.",
+    thumbnail: "assets/projects/carousel-thumb.svg",
+    image: "assets/projects/carousel-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Product Launch Visual Kit",
+    category: "Branding",
+    description: "Launch visuals including hero image, social post, and supporting brand assets.",
+    objective: "Create a consistent look for a new product introduction.",
+    role: "Graphic designer and visual system creator.",
+    beforeAfter: "Before: separate assets. After: unified launch kit.",
+    result: "More polished product launch communication.",
+    thumbnail: "assets/projects/launch-kit-thumb.svg",
+    image: "assets/projects/launch-kit-case-study.pdf",
+    type: "pdf"
+  },
+  {
+    title: "Digital Ad Creative",
+    category: "Poster",
+    description: "Ad creative focused on concise message, visual hook, and clear CTA.",
+    objective: "Support campaign conversion with a strong first impression.",
+    role: "Ad creative designer.",
+    beforeAfter: "Before: unclear CTA. After: cleaner message and stronger offer display.",
+    result: "Ready-to-use ad visual for digital campaigns.",
+    thumbnail: "assets/projects/digital-ad-thumb.svg",
+    image: "assets/projects/digital-ad-case-study.pdf",
+    type: "pdf"
+  }
+];
+
+const categories = ["All", ...new Set(projects.map(project => project.category))];
+const filterButtons = document.getElementById("filterButtons");
+const projectGrid = document.getElementById("projectGrid");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const year = document.getElementById("year");
+
+if (year) year.textContent = new Date().getFullYear();
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => navLinks.classList.remove("open"));
+  });
+}
+
+function renderButtons() {
+  filterButtons.innerHTML = categories.map(category => `
+    <button class="filter-btn ${category === "All" ? "active" : ""}" data-category="${category}">${category}</button>
+  `).join("");
+
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      renderProjects(button.dataset.category);
+    });
+  });
+}
+
+function renderProjects(category = "All") {
+  const filteredProjects = category === "All"
+    ? projects
+    : projects.filter(project => project.category === category);
+
+  projectGrid.innerHTML = filteredProjects.map(project => {
+    const originalIndex = projects.indexOf(project);
+    return `
+      <article class="project-card" tabindex="0" role="button" aria-label="Preview PDF case study and details for ${project.title}" data-project-index="${originalIndex}">
+        <div class="project-thumb">
+          <img src="${project.thumbnail}" alt="${project.title} thumbnail" loading="lazy">
+          <span class="view-label">Preview PDF</span>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">${project.category}</div>
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <div class="project-detail">
+            <p><strong>Objective:</strong> ${project.objective}</p>
+            <p><strong>Role:</strong> ${project.role}</p>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => openProjectModal(card.dataset.projectIndex));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProjectModal(card.dataset.projectIndex);
+      }
+    });
+  });
+}
+
+const modal = document.getElementById("projectModal");
+const modalThumb = document.getElementById("modalThumb");
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalObjective = document.getElementById("modalObjective");
+const modalRole = document.getElementById("modalRole");
+const modalBeforeAfter = document.getElementById("modalBeforeAfter");
+const modalResult = document.getElementById("modalResult");
+
+function openProjectModal(index) {
+  const project = projects[index];
+  if (!project) return;
+
+  if (project.type === "pdf") {
+    modalThumb.innerHTML = `
+      <iframe
+        src="${project.image}#toolbar=0&navpanes=0&scrollbar=0"
+        title="${project.title} PDF preview"
+        loading="lazy">
+      </iframe>
+    `;
+  } else {
+    modalThumb.innerHTML = `
+      <a href="${project.image}" target="_blank" rel="noopener" title="Open full image in new tab">
+        <img src="${project.image}" alt="${project.title} full design preview">
+      </a>
+    `;
+  }
+
+  modalCategory.textContent = project.category;
+  modalTitle.textContent = project.title;
+  modalDescription.textContent = project.description;
+  modalObjective.textContent = project.objective;
+  modalRole.textContent = project.role;
+  modalBeforeAfter.textContent = project.beforeAfter;
+  modalResult.textContent = project.result;
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-active");
+}
+
+function closeProjectModal() {
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-active");
+  modalThumb.innerHTML = "";
+}
+
+document.querySelectorAll("[data-close-modal]").forEach(element => {
+  element.addEventListener("click", closeProjectModal);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && modal.classList.contains("open")) {
+    closeProjectModal();
+  }
+});
+
+renderButtons();
+renderProjects();
