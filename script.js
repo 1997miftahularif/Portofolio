@@ -36,7 +36,7 @@ result: "Produced more engaging event documentation content with stronger visual
   thumbnail: "assets/projects/stfjazz.jpg",
   media: [
     "assets/projects/Jazzday1.mp4",
-    "assets/projects/Jazzday2.mp4"
+    "assets/projects/Jazzday2.mp4",
   ],
   type: "video"
   },
@@ -53,16 +53,22 @@ result: "Improved portfolio presentation with a more professional digital identi
     type: "pdf"
   },
   {
-    title: "Short Video Editing",
+    title: "Social Media Video",
     category: "Video Editing",
     description: "Short-form video edit for social media using product highlights and simple transitions.",
     objective: "Deliver fast, engaging content for social media campaigns.",
     role: "Video editor and visual arranger.",
     beforeAfter: "Before: raw footage. After: structured short-form content.",
     result: "More engaging video format ready for posting.",
-    thumbnail: "assets/projects/video-thumb.svg",
-    image: "assets/projects/video-case-study.pdf",
-    type: "pdf"
+    thumbnail: "assets/projects/thumbsmv.png",
+  media: [
+    "assets/projects/smv1.mp4",
+    "assets/projects/smv2.mp4",
+    "assets/projects/smv3.mp4",
+    "assets/projects/smv4.mp4",
+    "assets/projects/smv5.mp4",
+  ],
+  type: "video"
   },
   {
     title: "Website UI Landing Page",
