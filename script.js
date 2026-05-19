@@ -24,30 +24,30 @@ const projects = [
     type: "pdf"
   },
   {
-  title: "Jazz Traffic Festival",
-  category: "Video Editing",
-  title: "Jazz Traffic Festival",
-category: "Video Editing",
-description: "A short-form event video created as part of the digital media coverage for Jazz Traffic Festival, a national music event organized by Suara Surabaya.",
-objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
-role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
-beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
-result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation.",
-  thumbnail: "assets/projects/stfjazz.jpg",
-  media: [
-    "assets/projects/Jazzday1.mp4",
-    "assets/projects/Jazzday2.mp4",
-  ],
-  type: "video"
+    title: "Jazz Traffic Festival",
+    category: "Video Editing",
+    title: "Jazz Traffic Festival",
+    category: "Video Editing",
+    description: "A short-form event video created as part of the digital media coverage for Jazz Traffic Festival, a national music event organized by Suara Surabaya.",
+    objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
+    role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
+    beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
+    result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation.",
+    thumbnail: "assets/projects/stfjazz.jpg",
+    media: [
+      "assets/projects/Jazzday1.mp4",
+      "assets/projects/Jazzday2.mp4",
+    ],
+    type: "video"
   },
   {
     title: "Web Portofolio",
     category: "Website UI",
     description: "Responsive portfolio website UI designed to showcase creative projects, professional experience, and digital design capabilities through a modern visual interface.",
-objective: "Create a clean and engaging user experience that improves portfolio presentation, personal branding, and project accessibility across desktop and mobile devices.",
-role: "UI Designer and Front-End Developer, responsible for layout structure, visual direction, responsive design, and interface implementation.",
-beforeAfter: "Before: portfolio presentation felt static and less organized. After: modern responsive website UI with clearer navigation, stronger visual hierarchy, and more professional project showcase.",
-result: "Improved portfolio presentation with a more professional digital identity and better viewing experience across multiple devices.",
+    objective: "Create a clean and engaging user experience that improves portfolio presentation, personal branding, and project accessibility across desktop and mobile devices.",
+    role: "UI Designer and Front-End Developer, responsible for layout structure, visual direction, responsive design, and interface implementation.",
+    beforeAfter: "Before: portfolio presentation felt static and less organized. After: modern responsive website UI with clearer navigation, stronger visual hierarchy, and more professional project showcase.",
+    result: "Improved portfolio presentation with a more professional digital identity and better viewing experience across multiple devices.",
     thumbnail: "assets/projects/uithumb_11zon.jpg",
     image: "assets/projects/ui_11zon.pdf",
     type: "pdf"
@@ -56,19 +56,35 @@ result: "Improved portfolio presentation with a more professional digital identi
     title: "Social Media Video",
     category: "Video Editing",
     description: "Promotional video content showcasing kids shampoo and body wash products through playful visuals and family-friendly storytelling.",
-objective: "Create engaging product awareness content that highlights gentle ingredients, daily care benefits, and a cheerful bath-time experience for children.",
-role: "Video Editor and Visual Content Designer, responsible for motion flow, product-focused storytelling, and social media video presentation.",
-beforeAfter: "Before: static product presentation with limited emotional connection. After: dynamic and engaging short-form video content with stronger visual appeal and clearer product communication.",
-result: "Produced more engaging promotional content with improved brand presentation and stronger audience attention on social media platforms.",
+    objective: "Create engaging product awareness content that highlights gentle ingredients, daily care benefits, and a cheerful bath-time experience for children.",
+    role: "Video Editor and Visual Content Designer, responsible for motion flow, product-focused storytelling, and social media video presentation.",
+    beforeAfter: "Before: static product presentation with limited emotional connection. After: dynamic and engaging short-form video content with stronger visual appeal and clearer product communication.",
+    result: "Produced more engaging promotional content with improved brand presentation and stronger audience attention on social media platforms.",
     thumbnail: "assets/projects/thumbsmv.png",
-  media: [
-    "assets/projects/smv1.mp4",
-    "assets/projects/smv2.mp4",
-    "assets/projects/smv3.mp4",
-    "assets/projects/smv4.mp4",
-    "assets/projects/smv5.mp4",
-  ],
-  type: "video"
+    media: [
+      "assets/projects/smv1.mp4",
+      "assets/projects/smv2.mp4",
+      "assets/projects/smv3.mp4",
+      "assets/projects/smv4.mp4",
+      "assets/projects/smv5.mp4",
+    ],
+    type: "video"
+  },
+  {
+    title: "AI Video Animation",
+    category: "Video Editing",
+    description: "A short-form event video created as part of the digital media coverage for Jazz Traffic Festival, a national music event organized by Suara Surabaya.",
+    objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
+    role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
+    beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
+    result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation.",
+    thumbnail: "assets/projects/ai ai.png",
+    media: [
+      "assets/projects/ai ani1.mp4",
+      "assets/projects/ai ani2.mp4",
+      "assets/projects/ai ani3.mp4",
+    ],
+    type: "video"
   },
 ];
 
@@ -178,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
          </a>
       `;
     } else if (project.type === "video") {
-  modalThumb.innerHTML = project.media.map(video => `
+      modalThumb.innerHTML = project.media.map(video => `
     <video controls playsinline>
       <source src="${video}" type="video/mp4">
       Your browser does not support the video tag.
