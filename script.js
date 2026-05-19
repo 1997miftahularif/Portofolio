@@ -70,66 +70,6 @@ result: "Produced more engaging promotional content with improved brand presenta
   ],
   type: "video"
   },
-  {
-    title: "Website UI Landing Page",
-    category: "Website UI",
-    description: "Landing page UI concept for service or product introduction.",
-    objective: "Guide visitors from first impression to clear action.",
-    role: "UI visual designer.",
-    beforeAfter: "Before: unclear page flow. After: focused landing page structure.",
-    result: "Improved visual flow and CTA visibility.",
-    thumbnail: "assets/projects/website-ui-thumb.svg",
-    image: "assets/projects/website-ui-case-study.pdf",
-    type: "pdf"
-  },
-  {
-    title: "Marketplace Product Banner",
-    category: "Marketplace",
-    description: "Product banner for marketplace listing and promotional display.",
-    objective: "Make product benefits visible quickly to potential buyers.",
-    role: "Marketplace visual designer.",
-    beforeAfter: "Before: generic listing image. After: benefit-focused product banner.",
-    result: "Stronger product presentation for online selling.",
-    thumbnail: "assets/projects/marketplace-thumb.svg",
-    image: "assets/projects/marketplace-case-study.pdf",
-    type: "pdf"
-  },
-  {
-    title: "Instagram Carousel Education",
-    category: "Social Media",
-    description: "Educational carousel explaining product benefits with clean copy and visual structure.",
-    objective: "Educate audience and support soft-selling strategy.",
-    role: "Content visual designer.",
-    beforeAfter: "Before: long text caption only. After: swipeable educational visual story.",
-    result: "More digestible information and stronger engagement potential.",
-    thumbnail: "assets/projects/carousel-thumb.svg",
-    image: "assets/projects/carousel-case-study.pdf",
-    type: "pdf"
-  },
-  {
-    title: "Product Launch Visual Kit",
-    category: "Branding",
-    description: "Launch visuals including hero image, social post, and supporting brand assets.",
-    objective: "Create a consistent look for a new product introduction.",
-    role: "Graphic designer and visual system creator.",
-    beforeAfter: "Before: separate assets. After: unified launch kit.",
-    result: "More polished product launch communication.",
-    thumbnail: "assets/projects/launch-kit-thumb.svg",
-    image: "assets/projects/launch-kit-case-study.pdf",
-    type: "pdf"
-  },
-  {
-    title: "Digital Ad Creative",
-    category: "Poster",
-    description: "Ad creative focused on concise message, visual hook, and clear CTA.",
-    objective: "Support campaign conversion with a strong first impression.",
-    role: "Ad creative designer.",
-    beforeAfter: "Before: unclear CTA. After: cleaner message and stronger offer display.",
-    result: "Ready-to-use ad visual for digital campaigns.",
-    thumbnail: "assets/projects/digital-ad-thumb.svg",
-    image: "assets/projects/digital-ad-case-study.pdf",
-    type: "pdf"
-  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
