@@ -73,11 +73,11 @@ const projects = [
   {
     title: "AI Video Animation",
     category: "Video Editing",
-    description: "A short-form event video created as part of the digital media coverage for Jazz Traffic Festival, a national music event organized by Suara Surabaya.",
-    objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
-    role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
-    beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
-    result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation.",
+    description: "AI-generated animation video featuring playful 3D characters and colorful motion visuals designed for engaging social media content.",
+    objective: "Create eye-catching animated content that captures audience attention through expressive character motion, vibrant visuals, and entertaining storytelling.",
+    role: "AI Animation Designer and Video Editor, responsible for visual direction, animation composition, scene arrangement, and final video presentation.",
+    beforeAfter: "Before: static character concept and visual idea. After: lively AI-powered animated video with dynamic movement, stronger visual appeal, and more engaging storytelling.",
+    result: "Produced more interactive and entertaining video content with stronger audience engagement potential across digital and social media platforms.",
     thumbnail: "assets/projects/ai ai.png",
     media: [
       "assets/projects/ai ani1.mp4",
