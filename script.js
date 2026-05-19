@@ -55,11 +55,11 @@ result: "Improved portfolio presentation with a more professional digital identi
   {
     title: "Social Media Video",
     category: "Video Editing",
-    description: "Short-form video edit for social media using product highlights and simple transitions.",
-    objective: "Deliver fast, engaging content for social media campaigns.",
-    role: "Video editor and visual arranger.",
-    beforeAfter: "Before: raw footage. After: structured short-form content.",
-    result: "More engaging video format ready for posting.",
+    description: "Promotional video content showcasing kids shampoo and body wash products through playful visuals and family-friendly storytelling.",
+objective: "Create engaging product awareness content that highlights gentle ingredients, daily care benefits, and a cheerful bath-time experience for children.",
+role: "Video Editor and Visual Content Designer, responsible for motion flow, product-focused storytelling, and social media video presentation.",
+beforeAfter: "Before: static product presentation with limited emotional connection. After: dynamic and engaging short-form video content with stronger visual appeal and clearer product communication.",
+result: "Produced more engaging promotional content with improved brand presentation and stronger audience attention on social media platforms.",
     thumbnail: "assets/projects/thumbsmv.png",
   media: [
     "assets/projects/smv1.mp4",
