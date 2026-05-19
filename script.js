@@ -129,20 +129,6 @@ const projects = [
     type: "video"
   },
   {
-    title: "MakeUp Wedding",
-    category: "Video Editing",
-    description: "Wedding makeup video content showcasing bridal beauty transformation, elegant styling, and emotional wedding moments through modern visual storytelling.",
-    objective: "Create visually engaging bridal makeup content that highlights makeup details, elegance, and emotional atmosphere for social media and promotional purposes.",
-    role: "Video Editor and Beauty Content Designer, responsible for visual storytelling, shot arrangement, pacing, color mood, and final social media presentation.",
-    beforeAfter: "Before: standard makeup documentation with limited emotional impact. After: cinematic bridal video content with stronger beauty focus, elegant atmosphere, and more engaging storytelling.",
-    result: "Produced more premium and emotionally engaging wedding beauty content with stronger visual appeal and social media engagement potential.",
-    thumbnail: "assets/projects/make up thumb.png",
-    media: [
-      "assets/projects/make up mov.mp4",
-    ],
-    type: "video"
-  },
-  {
     title: "SOIna",
     category: "Video Editing",
     description: "Short-form training video content documenting creative and life-skill activities designed specifically for children with disabilities in a supportive learning environment.",
