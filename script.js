@@ -32,7 +32,7 @@ description: "A short-form event video created as part of the digital media cove
 objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
 role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
 beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
-result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation."
+result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation.",
   thumbnail: "assets/projects/stfjazz.jpg",
   media: [
     "assets/projects/Jazzday1.mp4",
