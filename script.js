@@ -26,11 +26,13 @@ const projects = [
   {
   title: "Jazz Traffic Festival",
   category: "Video Editing",
-  description: "Short-form video editing project for event documentation and social media campaign needs.",
-  objective: "Create engaging video content with a clear visual flow and festival atmosphere.",
-  role: "Video Editor, visual arranger, and social media content editor.",
-  beforeAfter: "Before: raw footage. After: structured short-form video content.",
-  result: "More engaging video format ready for digital and social media use.",
+  title: "Jazz Traffic Festival",
+category: "Video Editing",
+description: "A short-form event video created as part of the digital media coverage for Jazz Traffic Festival, a national music event organized by Suara Surabaya.",
+objective: "Capture the atmosphere and audience excitement of the festival through engaging and fast-paced social media video content.",
+role: "Digital Creative Team, video editing, content arrangement, and social media visual support.",
+beforeAfter: "Before: raw event footage with unstructured scenes. After: dynamic and engaging short-form video optimized for digital audience viewing.",
+result: "Produced more engaging event documentation content with stronger visual storytelling and social media presentation."
   thumbnail: "assets/projects/stfjazz.jpg",
   media: [
     "assets/projects/Jazzday1.mp4",
