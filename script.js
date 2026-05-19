@@ -86,6 +86,76 @@ const projects = [
     ],
     type: "video"
   },
+  {
+    title: "EFFO",
+    category: "Video Editing",
+    description: "Fashion promotional video featuring model-based outfit presentation designed to highlight product details, styling, and modern brand aesthetics.",
+    objective: "Create visually engaging fashion content that showcases outfit appeal, fabric movement, and styling confidence through cinematic model presentation.",
+    role: "Video Editor and Fashion Content Designer, responsible for visual storytelling, shot arrangement, motion pacing, and social media video presentation.",
+    beforeAfter: "Before: static outfit display with limited emotional engagement. After: dynamic fashion video with stronger visual atmosphere, styling focus, and modern presentation.",
+    result: "Produced more premium and engaging fashion content with improved brand image and stronger audience attraction across social media platforms.",
+    thumbnail: "assets/projects/effo.png",
+    media: [
+      "assets/projects/effo mov.mp4",
+    ],
+    type: "video"
+  },
+  {
+    title: "Kampoeng Dolanan",
+    category: "Video Editing",
+    description: "Short-form video content featuring Indonesian children playing traditional games in a cheerful village environment, designed to highlight cultural values and childhood interaction.",
+    objective: "Create engaging and nostalgic video content that promotes traditional Indonesian games through fun visual storytelling and emotional audience connection.",
+    role: "Video Editor and Creative Content Designer, responsible for visual storytelling, scene arrangement, motion pacing, and social media presentation.",
+    beforeAfter: "Before: traditional games presented as ordinary daily activities. After: visually engaging and emotionally driven video content with stronger storytelling and audience appeal.",
+    result: "Produced more entertaining and culturally engaging video content with stronger social media attraction and audience engagement potential.",
+    thumbnail: "assets/projects/kd thumb.png",
+    media: [
+      "assets/projects/kd mov.mp4",
+    ],
+    type: "video"
+  },
+  {
+    title: "KPUD Surabaya",
+    category: "Video Editing",
+    description: "Short-form documentary video covering regional election activities in Indonesia, designed to capture public participation, voting atmosphere, and civic engagement moments.",
+    objective: "Create informative and engaging visual content that highlights democratic participation and communicates the importance of regional elections to the public.",
+    role: "Video Editor and Digital Content Designer, responsible for footage arrangement, storytelling flow, visual pacing, and social media video presentation.",
+    beforeAfter: "Before: election documentation felt formal and less engaging. After: visually structured and audience-friendly video content with clearer storytelling and stronger public communication.",
+    result: "Produced more engaging and professional election-related video content with improved visual communication and stronger audience reach across digital platforms.",
+    thumbnail: "assets/projects/kpu thumb.png",
+    media: [
+      "assets/projects/kpu mov.mp4",
+    ],
+    type: "video"
+  },
+  {
+    title: "MakeUp Wedding",
+    category: "Video Editing",
+    description: "Wedding makeup video content showcasing bridal beauty transformation, elegant styling, and emotional wedding moments through modern visual storytelling.",
+    objective: "Create visually engaging bridal makeup content that highlights makeup details, elegance, and emotional atmosphere for social media and promotional purposes.",
+    role: "Video Editor and Beauty Content Designer, responsible for visual storytelling, shot arrangement, pacing, color mood, and final social media presentation.",
+    beforeAfter: "Before: standard makeup documentation with limited emotional impact. After: cinematic bridal video content with stronger beauty focus, elegant atmosphere, and more engaging storytelling.",
+    result: "Produced more premium and emotionally engaging wedding beauty content with stronger visual appeal and social media engagement potential.",
+    thumbnail: "assets/projects/make up thumb.png",
+    media: [
+      "assets/projects/make up mov.mp4",
+    ],
+    type: "video"
+  },
+  {
+    title: "SOIna",
+    category: "Video Editing",
+    description: "Short-form training video content documenting creative and life-skill activities designed specifically for children with disabilities in a supportive learning environment.",
+    objective: "Create meaningful and emotionally engaging video content that highlights inclusivity, confidence building, and positive learning experiences for children with special needs.",
+    role: "Video Editor and Creative Content Designer, responsible for storytelling flow, visual arrangement, emotional pacing, and social media video presentation.",
+    beforeAfter: "Before: activity documentation felt ordinary and less emotionally connected. After: engaging and inspiring video content with stronger storytelling, warmth, and audience connection.",
+    result: "Produced more impactful and inclusive video content with stronger emotional engagement and positive social media presentation.",
+    thumbnail: "assets/projects/soina thumb.png",
+    media: [
+      "assets/projects/soina mov.mp4",
+    ],
+    type: "video"
+  },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
