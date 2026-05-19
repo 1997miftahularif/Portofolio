@@ -230,12 +230,12 @@ document.addEventListener("DOMContentLoaded", () => {
          </a>
       `;
     } else if (project.type === "video") {
-      modalThumb.innerHTML = `
-        <video controls autoplay playsinline>
-          <source src="${project.media[0]}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      `;
+  modalThumb.innerHTML = project.media.map(video => `
+    <video controls playsinline>
+      <source src="${video}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  `).join("");
     } else {
       modalThumb.innerHTML = `<p>Preview unavailable.</p>`;
     }
