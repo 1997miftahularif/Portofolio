@@ -41,15 +41,15 @@ result: "Produced more engaging event documentation content with stronger visual
   type: "video"
   },
   {
-    title: "Promotional Poster Design",
-    category: "Poster",
+    title: "Web Portofolio",
+    category: "Website UI",
     description: "Campaign poster designed for digital promotion and announcement needs.",
     objective: "Create attention-grabbing visuals with clear event or product message.",
     role: "Poster designer.",
     beforeAfter: "Before: flat visual. After: stronger hierarchy and CTA.",
     result: "More direct and professional promotional asset.",
-    thumbnail: "assets/projects/poster-thumb.svg",
-    image: "assets/projects/poster-case-study.pdf",
+    thumbnail: "assets/projects/uithumb_11zon.jpg",
+    image: "assets/projects/ui_11zon.pdf",
     type: "pdf"
   },
   {
