@@ -1,5 +1,17 @@
 const projects = [
   {
+    title: "DESIGN COLLABORATION IN ACTION",
+    category: "DESIGN TEAM",
+    description: "A collaborative visual project showcasing teamwork, creative coordination, and design execution across multiple campaign and branding needs.",
+    objective: "Highlight collaborative design workflow and demonstrate how strategic teamwork creates stronger and more consistent visual communication.",
+    role: "Graphic Designer, campaign visual direction, layout design, creative collaboration, and presentation development.",
+    beforeAfter: "Before: scattered visual direction and disconnected ideas. After: aligned design system with collaborative creative execution and stronger visual consistency.",
+    result: "Created a more professional and cohesive campaign presentation through effective design collaboration and structured creative workflow.",
+    thumbnail: "assets/projects/design team thumb.png",
+    image: "assets/projects/design team.pdf",
+    type: "pdf"
+  },
+  {
     title: "POUTCARE",
     category: "Social Media Design",
     description: "A series of social media visuals designed to introduce Poutcare products through playful and family-friendly branding.",
