@@ -283,3 +283,26 @@ body.modal-active { overflow: hidden; }
   background: #000;
   margin-bottom: 18px;
 }
+
+.btn.download{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#fff;
+    border:1px solid var(--line);
+    color:var(--dark);
+
+    transition:.25s;
+}
+
+.btn.download:hover{
+    background:var(--dark);
+    color:#fff;
+    border-color:var(--dark);
+}
+
+.btn.download svg{
+    width:18px;
+    height:18px;
+}
